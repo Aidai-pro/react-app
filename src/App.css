@@ -22,7 +22,7 @@ body {
 }
 
 
-/* HEADER */
+/* HEADER
 .Header {
     display: flex;
     justify-content: space-between;
@@ -35,9 +35,9 @@ body {
     background-color: rgba(0, 0, 0, 0.95);
     box-shadow: 0 4px 12px rgba(229, 9, 20, 0.4);
     /* Адаптивная ширина */
-    max-width: 1300px; 
+    /* max-width: 1300px; 
     margin: 0 auto;
-}
+} */
 
 .Header-logo {
     font-family: var(--font-spooky);
@@ -67,7 +67,7 @@ body {
 .Header-nav a:hover {
     color: var(--accent-red);
     text-shadow: 0 0 8px var(--accent-red);
-}
+} */
 
 /*  SECTION STYLES  */
 .Section {
@@ -292,13 +292,13 @@ body {
     margin-top: 1}
 
 
-.Header-logo-link {
+/* .Header-logo-link {
     text-decoration: none; 
-}
+} */
 
-.Footer {
+/* .Footer {
     text-align: center;
-color: #888}
+color: #888} */
 
 
 /* Стили для кнопок на странице Detail View */

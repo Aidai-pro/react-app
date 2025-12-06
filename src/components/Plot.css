@@ -1,0 +1,115 @@
+.Plot-section {
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: linear-gradient(180deg, #0a0a0a 0%, #111 100%);
+    border-top: 1px solid rgba(211, 2, 12, 0.2);
+    border-bottom: 1px solid rgba(211, 2, 12, 0.2);
+}
+
+.Plot-title {
+    font-family: var(--font-spooky);
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--text-light);
+    text-shadow: 2px 2px 0px var(--accent-red);
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: clamp(32px, 5vw, 48px);
+}
+
+.Plot-subtitle {
+    font-size: 22px;
+    color: var(--accent-red);
+    text-align: center;
+    margin-bottom: 50px;
+    font-style: italic;
+    font-size: clamp(18px, 2.5vw, 22px);
+}
+
+.Plot-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.Plot-description {
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    color: #ffffffcc;
+    font-size: clamp(16px, 2vw, 18px);
+}
+
+.Plot-description strong {
+    color: var(--accent-red);
+    font-weight: bold;
+}
+
+.Plot-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 40px;
+}
+
+.Highlight-card {
+    background: rgba(30, 30, 30, 0.7);
+    border: 1px solid rgba(211, 2, 12, 0.3);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.Highlight-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent-red), transparent);
+}
+
+.Highlight-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-red);
+    box-shadow: 0 10px 30px rgba(211, 2, 12, 0.2);
+}
+
+.Highlight-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.Highlight-card h3 {
+    color: var(--accent-red);
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-family: var(--font-spooky);
+}
+
+.Highlight-card p {
+    color: #ffffffb4;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .Plot-section {
+        padding: 60px 20px;
+    }
+    
+    .Plot-highlights {
+        grid-template-columns: 1fr;
+    }
+}
