@@ -1,0 +1,91 @@
+.Shop-page .Hero-section {
+    background-image: url('https://assets.teenvogue.com/photos/68778c41492e5814bc5deff3/16:10/w_2560%2Cc_limit/EN-US_ST5_Hero_Vertical_27x40_RGB_PRE.jpg');
+    height: 50vh;
+}
+
+.Products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.Product-card {
+    background: rgba(30, 30, 30, 0.8);
+    border: 2px solid var(--accent-red);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.Product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(211, 2, 12, 0.3);
+}
+
+.Product-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.Product-content {
+    padding: 20px;
+}
+
+.Product-title {
+    color: var(--accent-red);
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: var(--font-spooky);
+}
+
+.Product-description {
+    color: #ffffffb4;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    min-height: 60px;
+}
+
+.Product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.Product-price {
+    color: #00bcd4;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.Product-rating {
+    color: #ffd700;
+    font-size: 14px;
+}
+
+.Product-button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--accent-red);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.Product-button:hover {
+    background-color: #ff3344;
+}
+
+.Product-button.in-basket {
+    background-color: #00bcd4;
+}
+
+.Product-button.in-basket:hover {
+    background-color: #00a3c4;
+}

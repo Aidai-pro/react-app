@@ -1,0 +1,80 @@
+/* BasketPage.css */
+.Basket-page .Hero-section {
+    background-image: url('https://avatars.mds.yandex.net/i?id=9b29fc5efca2c85fb06db7417c7111cb3c1f3d75-9848644-images-thumbs&n=13');
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Basket-page .Hero-content {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px 60px;
+    border: 3px solid var(--accent-red);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.Basket-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.Basket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--accent-red);
+}
+
+.Continue-shopping {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+}
+
+.Continue-shopping:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.Empty-basket {
+    text-align: center;
+    padding: 60px 20px;
+    background: rgba(30, 30, 30, 0.6);
+    border-radius: 10px;
+    border: 2px dashed var(--accent-red);
+}
+
+.Empty-basket h3 {
+    color: var(--accent-red);
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.Empty-basket p {
+    color: #ffffffb4;
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+.Shop-button {
+    display: inline-block;
+    background-color: var(--accent-red);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.Shop-button:hover {
+    background-color: #ff3344;
+}

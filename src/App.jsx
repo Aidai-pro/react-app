@@ -9,6 +9,12 @@ import { seasonsData } from './data/seasonsData';
 import CharactersSection from './components/Characters/CharactersSection'; 
 import PhotoGallery from './components/Gallery/PhotoGallery'; 
 import QuotesSection from './components/Quotes/QuotesSection'; 
+import ShopPage from './pages/ShopPage'; // Добавьте
+import BasketPage from './pages/BasketPage'; // Добавьте
+import CreateOrderPage from './pages/CreateOrderPage'; // Добавьте
+import OrderPage from './pages/OrderPage'; // Добавьте
+import { BasketProvider } from './context/BasketContext'; // Добавьте
+
 
 function ScrollToTop() {
   const location = useLocation();
@@ -153,15 +159,21 @@ const SeasonDetailView = () => {
 // 5. ГЛАВНАЯ ФУНКЦИЯ APP
 function App() {
   return (
-    <BrowserRouter>
-        <ScrollToTop />  
-        <Header />
-        <Routes>
-            <Route path="/" element={<HomeView />} />
-            <Route path="/season/:id" element={<SeasonDetailView />} />
-        </Routes>
-        <Footer />
-    </BrowserRouter>
+    <BasketProvider> {/* Оберните в BasketProvider */}
+      <BrowserRouter>
+          <ScrollToTop />  
+          <Header />
+          <Routes>
+              <Route path="/" element={<HomeView />} />
+              <Route path="/season/:id" element={<SeasonDetailView />} />
+              <Route path="/shop" element={<ShopPage />} /> {/* Добавьте */}
+              <Route path="/basket" element={<BasketPage />} /> {/* Добавьте */}
+              <Route path="/create-order" element={<CreateOrderPage />} /> {/* Добавьте */}
+              <Route path="/order/:id" element={<OrderPage />} /> {/* Добавьте */}
+          </Routes>
+          <Footer />
+      </BrowserRouter>
+    </BasketProvider>
   );
 }
 
