@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="Footer-section">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="/#plot">The Plot</a></li>
+            <li><a href="/#plot">About</a></li>
             <li><a href="/#seasons">Seasons</a></li>
             <li><a href="/#characters">Characters</a></li>
             <li><a href="/#moments">Gallery</a></li>
@@ -23,7 +23,7 @@ const Footer = () => {
         </div>
         
         <div className="Footer-section">
-          <h4>Official Resources</h4>
+          <h4>Contacts</h4>
           <ul>
             <li><a href="https://www.netflix.com/title/80057281" target="_blank" rel="noopener noreferrer">Watch on Netflix</a></li>
             <li><a href="https://strangerthings-store.com" target="_blank" rel="noopener noreferrer">Official Store</a></li>

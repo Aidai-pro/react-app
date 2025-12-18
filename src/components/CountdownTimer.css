@@ -1,0 +1,113 @@
+/* src/components/CountdownTimer.css */
+.countdown-container {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 20px;
+  margin: 40px auto;
+  max-width: 900px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 2px solid #3949ab;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.countdown-title {
+  font-size: 2.2em;
+  margin-bottom: 40px;
+  color: #bb86fc;
+  text-shadow: 0 0 10px rgba(187, 134, 252, 0.5);
+  letter-spacing: 1px;
+}
+
+.countdown-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 25px 20px;
+  min-width: 140px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.countdown-item:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.countdown-value {
+  font-size: 3.5em;
+  font-weight: 800;
+  color: #03dac6;
+  text-shadow: 0 0 15px rgba(3, 218, 198, 0.7);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.countdown-label {
+  font-size: 1.2em;
+  color: #cfd8dc;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.countdown-message {
+  font-size: 1.3em;
+  color: #bb86fc;
+  font-style: italic;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.countdown-expired {
+  animation: pulse 2s infinite;
+}
+
+.countdown-expired h3 {
+  font-size: 2.5em;
+  color: #03dac6;
+  margin-bottom: 15px;
+}
+
+.countdown-expired p {
+  font-size: 1.4em;
+  color: #cfd8dc;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .countdown-grid {
+    gap: 15px;
+  }
+  
+  .countdown-item {
+    min-width: 110px;
+    padding: 20px 15px;
+  }
+  
+  .countdown-value {
+    font-size: 2.8em;
+  }
+  
+  .countdown-title {
+    font-size: 1.8em;
+  }
+}

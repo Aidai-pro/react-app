@@ -8,12 +8,15 @@ import SeasonsSection from './components/Seasons/SeasonsSection';
 import { seasonsData } from './data/seasonsData';
 import CharactersSection from './components/Characters/CharactersSection'; 
 import PhotoGallery from './components/Gallery/PhotoGallery'; 
-import QuotesSection from './components/Quotes/QuotesSection'; 
-import ShopPage from './pages/ShopPage'; // Добавьте
-import BasketPage from './pages/BasketPage'; // Добавьте
-import CreateOrderPage from './pages/CreateOrderPage'; // Добавьте
-import OrderPage from './pages/OrderPage'; // Добавьте
-import { BasketProvider } from './context/BasketContext'; // Добавьте
+import ShopPage from './pages/ShopPage'; 
+import BasketPage from './pages/BasketPage'; 
+import CreateOrderPage from './pages/CreateOrderPage'; 
+import OrderPage from './pages/OrderPage'; 
+import { BasketProvider } from './context/BasketContext'; 
+import { AuthProvider } from './context/AuthContext';
+import RegisterPage from './pages/RegisterPage';
+import LoginPage from './pages/LoginPage';
+import CountdownTimer from './components/CountdownTimer';
 
 
 function ScrollToTop() {
@@ -95,9 +98,8 @@ const HomeView = () => {
 
             {/* PHOTO GALLERY SECTION - теперь отдельный компонент */}
             <PhotoGallery />
+            <CountdownTimer />
             
-            {/* QUOTES SECTION - теперь отдельный компонент */}
-            <QuotesSection />
         </main>
     );
 }
@@ -159,6 +161,7 @@ const SeasonDetailView = () => {
 // 5. ГЛАВНАЯ ФУНКЦИЯ APP
 function App() {
   return (
+    <AuthProvider>
     <BasketProvider> {/* Оберните в BasketProvider */}
       <BrowserRouter>
           <ScrollToTop />  
@@ -170,10 +173,13 @@ function App() {
               <Route path="/basket" element={<BasketPage />} /> {/* Добавьте */}
               <Route path="/create-order" element={<CreateOrderPage />} /> {/* Добавьте */}
               <Route path="/order/:id" element={<OrderPage />} /> {/* Добавьте */}
+              <Route path="/register" element={<RegisterPage />} />
+            <Route path="/login" element={<LoginPage />} />
           </Routes>
           <Footer />
       </BrowserRouter>
     </BasketProvider>
+    </AuthProvider>
   );
 }
 
